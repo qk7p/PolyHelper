@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PolyHelper</string>
+    <string name="button">Открыть список</string>
+    <string name="add">Добавить</string>
+    <string name="next">Следующее</string>
+    <string name="width">Ширина:</string>
+    <string name="height">Высота</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirmed_orders">Confirmed Orders</string>
+    <string name="pendingorders">PendingOrders</string>
+    <string name="delivered_orders">Delivered Orders</string>
+    <string name="create_mail">создать письмо</string>
+    <string name="calculate_order">посчитать заказ</string>
+    <string name="send_mail">отправить письмо</string>
+    <string name="cardboard">картон</string>
+    <string name="digital_press">цифровая печать</string>
+    <string name="offset_press">офсетная печать</string>
+    <string name="type_of_print">тип печати</string>
+    <string name="material">материал</string>
+    <string name="delete">удалить</string>
+</resources>
