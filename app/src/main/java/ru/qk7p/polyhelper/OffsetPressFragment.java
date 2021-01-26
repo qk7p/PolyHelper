@@ -26,6 +26,11 @@ public class OffsetPressFragment extends Fragment {
 
         materialList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+
+        materialList.setLayoutManager(layoutManager);
+
         materialList.setAdapter(new MaterialsAdapter(100));
 
         return v;

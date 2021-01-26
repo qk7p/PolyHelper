@@ -28,28 +28,25 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(
-                tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
-            @Override
-            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                tabLayout, viewPager2, (tab, position) -> {
 
-                switch (position) {
-                    case 0:
-                       tab.setText("составить");
-                       tab.setIcon(R.drawable.ic_create);
-                       break;
-                    case 1: {
-                        tab.setText("отправить");
-                        tab.setIcon(R.drawable.ic_send);
-                        break;
-                    }
-                    case 2: {
-                        tab.setText("посчитать");
-                        tab.setIcon(R.drawable.ic_calculate);
-                        break;
+                    switch (position) {
+                        case 0:
+                           tab.setText("составить");
+                           tab.setIcon(R.drawable.ic_create);
+                           break;
+                        case 1: {
+                            tab.setText("отправить");
+                            tab.setIcon(R.drawable.ic_send);
+                            break;
+                        }
+                        case 2: {
+                            tab.setText("посчитать");
+                            tab.setIcon(R.drawable.ic_calculate);
+                            break;
+                        }
                     }
                 }
-            }
-        }
         );
         tabLayoutMediator.attach();
     }

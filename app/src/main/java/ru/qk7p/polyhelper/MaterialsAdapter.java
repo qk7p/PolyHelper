@@ -30,7 +30,7 @@ public class MaterialsAdapter extends RecyclerView.Adapter<MaterialsAdapter.Mate
         View view = inflater.inflate(layoutIdForListItem, parent, false);
 
         MaterialViewHolder viewHolder = new MaterialViewHolder(view);
-        viewHolder.viewHolderIndex.setText("ViewHolder index: " + viewHolderCount);
+//        viewHolder.viewHolderIndex.setText(viewHolderCount);
 
         viewHolderCount++;
 
@@ -56,8 +56,8 @@ public class MaterialsAdapter extends RecyclerView.Adapter<MaterialsAdapter.Mate
         public MaterialViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            listItemMaterialView = itemView.findViewById(R.id.tv_material_item);
-            viewHolderIndex = itemView.findViewById(R.id.tv_view_holder_material);
+            listItemMaterialView = itemView.findViewById(R.id.bt_material_item);
+//            viewHolderIndex = itemView.findViewById(R.id.bt_view_holder_material);
         }
 
         void bind(int listIndex) {

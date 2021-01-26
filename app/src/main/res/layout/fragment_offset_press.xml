@@ -23,34 +23,22 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_materials"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="5dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="@id/add_material"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_materials" />
 
     <Button
-        android:id="@+id/addSizeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:text="@string/add"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/removeSizeButton"
-        app:layout_constraintTop_toBottomOf="@id/rv_materials" />
-
-    <Button
-        android:id="@+id/removeSizeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="@string/delete"
-        app:layout_constraintLeft_toLeftOf="@id/addSizeButton"
+        android:id="@+id/add_material"
+        app:layout_constraintStart_toEndOf="@id/rv_materials"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_materials" />
+        app:layout_constraintTop_toBottomOf="@id/tv_materials"
+/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

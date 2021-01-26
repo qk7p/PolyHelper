@@ -5,7 +5,6 @@
     <string name="next">Следующее</string>
     <string name="width">Ширина:</string>
     <string name="height">Высота</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="confirmed_orders">Confirmed Orders</string>
     <string name="pendingorders">PendingOrders</string>
@@ -19,4 +18,5 @@
     <string name="type_of_print">тип печати</string>
     <string name="material">материал</string>
     <string name="delete">удалить</string>
+    <string name="delete_symbol">x</string>
 </resources>
