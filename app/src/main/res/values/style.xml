@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="MyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="shapeAppearanceOverlay">@style/MyShapeAppearance</item>
+    <style name="ButtonRoundedLeft" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/MyShapeAppearanceLeft</item>
     </style>
-    <style name="MyShapeAppearance">
-        <item name="cornerFamily">rounded</item>
+    <style name="MyShapeAppearanceLeft">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
         <item name="cornerFamilyTopRight">cut</item>
         <item name="cornerFamilyBottomRight">cut</item>
-        <item name="cornerSizeTopLeft">32dp</item>
-        <item name="cornerSizeBottomLeft">32dp</item>
+        <item name="cornerSizeBottomLeft">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
     </style>
+    <style name="ButtonRoundedRight" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/MyShapeAppearanceRight</item>
+    </style>
+    <style name="MyShapeAppearanceRight">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomRight">8dp</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="android:background">@color/sub_secondary</item>
+    </style>
+
 </resources>

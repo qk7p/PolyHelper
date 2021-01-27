@@ -12,27 +12,31 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MaterialsAdapter extends RecyclerView.Adapter<MaterialsAdapter.MaterialViewHolder> {
 
     private int numberItems;
-    private static int viewHolderCount;
+    private int layoutIdForListItem;
 
-    MaterialsAdapter(int numberOfItems) {
+    MaterialsAdapter(int numberOfItems, int layoutId) {
         numberItems = numberOfItems;
-        viewHolderCount = 0;
+        layoutIdForListItem = layoutId;
+    }
+
+    public void setNumberItems(int numberItems) {
+        this.numberItems = numberItems;
+    }
+
+    public void setLayoutIdForListItem(int layoutId) {
+        this.layoutIdForListItem = layoutId;
     }
 
     @NonNull
     @Override
     public MaterialViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        int layoutIdForListItem = R.layout.material_list_item;
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
         View view = inflater.inflate(layoutIdForListItem, parent, false);
 
         MaterialViewHolder viewHolder = new MaterialViewHolder(view);
-//        viewHolder.viewHolderIndex.setText(viewHolderCount);
-
-        viewHolderCount++;
 
         return viewHolder;
     }
@@ -40,7 +44,6 @@ public class MaterialsAdapter extends RecyclerView.Adapter<MaterialsAdapter.Mate
     @Override
     public void onBindViewHolder(@NonNull MaterialViewHolder holder, int position) {
         holder.bind(position);
-
     }
 
     @Override
@@ -51,13 +54,11 @@ public class MaterialsAdapter extends RecyclerView.Adapter<MaterialsAdapter.Mate
     class MaterialViewHolder extends RecyclerView.ViewHolder {
 
         TextView listItemMaterialView;
-        TextView viewHolderIndex;
 
         public MaterialViewHolder(@NonNull View itemView) {
             super(itemView);
 
             listItemMaterialView = itemView.findViewById(R.id.bt_material_item);
-//            viewHolderIndex = itemView.findViewById(R.id.bt_view_holder_material);
         }
 
         void bind(int listIndex) {

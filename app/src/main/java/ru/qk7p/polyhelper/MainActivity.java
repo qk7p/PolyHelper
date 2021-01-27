@@ -16,6 +16,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     private Cursor mainCursor;
+    ViewPager2 viewPager2;
 
 
     @Override
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewPager2 viewPager2 = findViewById(R.id.viewPager);
+        viewPager2 = findViewById(R.id.viewPager);
         viewPager2.setAdapter(new MainPagerAdapter(this));
+        viewPager2.setUserInputEnabled(false);
+
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(
@@ -50,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         );
         tabLayoutMediator.attach();
     }
-
 
 
 

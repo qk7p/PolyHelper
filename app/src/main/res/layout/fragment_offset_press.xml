@@ -10,35 +10,52 @@
     <TextView
         android:id="@+id/tv_materials"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:background="@color/teal_200"
-        android:gravity="center_horizontal"
+        android:background="@color/sub_main"
+        android:gravity="center_vertical"
+        android:padding="5dp"
         android:text="@string/material"
         android:textSize="18dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_materials"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        app:layout_constraintRight_toRightOf="@id/add_material"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_materials" />
 
     <Button
+        android:id="@+id/add_material"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add"
-        android:id="@+id/add_material"
-        app:layout_constraintStart_toEndOf="@id/rv_materials"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_materials"
-/>
+        app:layout_constraintRight_toRightOf="@id/tv_materials"
+        app:layout_constraintTop_toTopOf="@+id/tv_materials" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/tb_materials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toStartOf="@id/add_material"
+        app:layout_constraintTop_toTopOf="@id/tv_materials">
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/delete" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
