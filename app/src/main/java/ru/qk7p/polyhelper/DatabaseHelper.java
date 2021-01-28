@@ -17,8 +17,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE MATERIAL_SIZE (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + "SIZE TEXT);");
+        db.execSQL("CREATE TABLE MATERIAL (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + "NAME TEXT" + "TYPE TEXT" + "SIZE TEXT);");
+
     }
 
     @Override

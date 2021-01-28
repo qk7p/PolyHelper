@@ -19,4 +19,8 @@
     <string name="material">материал</string>
     <string name="delete">удалить</string>
     <string name="delete_symbol">x</string>
+    <string name="material_name">Название материала:</string>
+    <string name="material_category">Характеристика материала:</string>
+    <string name="material_density">плотность</string>
+    <string name="material_name_hint">название материала</string>
 </resources>
