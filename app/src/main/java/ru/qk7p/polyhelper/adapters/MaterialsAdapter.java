@@ -1,4 +1,4 @@
-package ru.qk7p.polyhelper;
+package ru.qk7p.polyhelper.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,12 +9,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import ru.qk7p.polyhelper.R;
+
 public class MaterialsAdapter extends RecyclerView.Adapter<MaterialsAdapter.MaterialViewHolder> {
 
     private int numberItems;
     private int layoutIdForListItem;
 
-    MaterialsAdapter(int numberOfItems, int layoutId) {
+    public MaterialsAdapter(int numberOfItems, int layoutId) {
         numberItems = numberOfItems;
         layoutIdForListItem = layoutId;
     }

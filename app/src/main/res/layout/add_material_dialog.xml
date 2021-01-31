@@ -23,15 +23,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/tv_material_name"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:text="@string/material_name"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_material_name"
@@ -107,6 +98,7 @@
         app:layout_constraintTop_toBottomOf="@id/rg_material_dialog" />
 
     <Button
+        android:id="@+id/btn_add_material"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"

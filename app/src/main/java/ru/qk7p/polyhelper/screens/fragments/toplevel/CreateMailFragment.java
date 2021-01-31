@@ -1,9 +1,8 @@
-package ru.qk7p.polyhelper;
+package ru.qk7p.polyhelper.screens.fragments.toplevel;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -11,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.zip.Inflater;
+import ru.qk7p.polyhelper.R;
+import ru.qk7p.polyhelper.screens.fragments.midlevel.DigitalPressFragment;
+import ru.qk7p.polyhelper.screens.fragments.midlevel.OffsetPressFragment;
 
 import static ru.qk7p.polyhelper.R.id.offsetPress;
 

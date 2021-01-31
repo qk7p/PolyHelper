@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalculateOrderFragment">
+    tools:context=".screens.fragments.toplevel.CalculateOrderFragment">
 
     <TextView
         android:layout_width="match_parent"

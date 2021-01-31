@@ -1,4 +1,4 @@
-package ru.qk7p.polyhelper;
+package ru.qk7p.polyhelper.screens.fragments.midlevel;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -14,11 +14,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.ToggleButton;
-import android.widget.Toolbar;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.github.brunomndantas.tpl4j.task.Task;
 import com.google.android.material.button.MaterialButtonToggleGroup;
+import com.google.android.material.textfield.TextInputEditText;
+
+import ru.qk7p.polyhelper.App;
+import ru.qk7p.polyhelper.adapters.MaterialsAdapter;
+import ru.qk7p.polyhelper.R;
+import ru.qk7p.polyhelper.model.Material;
 
 
 public class OffsetPressFragment extends Fragment
@@ -30,6 +36,7 @@ public class OffsetPressFragment extends Fragment
     Dialog dialog;
     Button addMaterialButton;
     Button deleteMaterialButton;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,25 +71,38 @@ public class OffsetPressFragment extends Fragment
 
         });
 
+
         return v;
     }
 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.add_material: {
-                dialog = new Dialog(v.getContext());
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.add_material_dialog);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        if (v.getId() == R.id.add_material) {
+            dialog = new Dialog(v.getContext());
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.add_material_dialog);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-                Button btnCloseDialog = dialog.findViewById(R.id.btn_close_dialog);
-                btnCloseDialog.setOnClickListener(v1 -> dialog.cancel());
+            Button btnCloseDialog = dialog.findViewById(R.id.btn_close_dialog);
+            btnCloseDialog.setOnClickListener(v1 -> dialog.cancel());
 
-                dialog.show();
-                break;
-            }
+
+            Button btnAddMaterial = dialog.findViewById(R.id.btn_add_material);
+            btnAddMaterial.setOnClickListener(v1 -> {
+                TextInputEditText editTextMaterialName = dialog.findViewById(R.id.et_material_name);
+                if (editTextMaterialName.getText().toString() == null) {
+                    Toast.makeText(v.getContext(), "опять ноль", Toast.LENGTH_SHORT).show();
+                } else {
+
+                    String materialName = editTextMaterialName.getText().toString();
+                    Material material = new Material(materialName);
+                    new Task(() -> App.getInstance().getMaterialDao().insert(material)).start();
+                    dialog.cancel();
+                }
+            });
+
+            dialog.show();
         }
     }
 }

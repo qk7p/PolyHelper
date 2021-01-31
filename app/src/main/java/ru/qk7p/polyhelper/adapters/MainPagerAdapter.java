@@ -1,9 +1,13 @@
-package ru.qk7p.polyhelper;
+package ru.qk7p.polyhelper.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import ru.qk7p.polyhelper.screens.fragments.toplevel.CalculateOrderFragment;
+import ru.qk7p.polyhelper.screens.fragments.toplevel.CreateMailFragment;
+import ru.qk7p.polyhelper.screens.fragments.toplevel.SendMailFragment;
 
 public class MainPagerAdapter extends FragmentStateAdapter {
 
